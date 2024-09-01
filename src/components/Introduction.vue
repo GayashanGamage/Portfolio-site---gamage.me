@@ -23,7 +23,7 @@
 <script setup>
 const downloadcv = () => {
   window.open(
-    "https://drive.google.com/uc?export=download&id=14LsetNNwaelSGdDb82B5qzaYTRaj-Gbr"
+    "https://drive.google.com/uc?export=download&id=1N1wJE5aPCbiF_sIZzeFY8s3whJrUyI2W"
   );
 };
 const openLinkedIn = () => {

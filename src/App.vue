@@ -1,8 +1,16 @@
 <template>
-  <div class="level-one-container">main window</div>
+  <div class="level-one-container">
+    <Menubar></Menubar>
+    <Intro></Intro>
+    <Project></Project>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Intro from "./components/Intro.vue";
+import Menubar from "./components/Menubar.vue";
+import Project from "./components/Project.vue";
+</script>
 
 <style>
 * {

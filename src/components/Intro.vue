@@ -57,9 +57,8 @@
 }
 .title {
   color: #0b2f9f;
-  font-size: 44px;
-  font-weight: 700;
-  letter-spacing: 9.24px;
+  font-size: 52px;
+  font-weight: 900;
 }
 .description {
   margin-top: 27px;
@@ -74,23 +73,23 @@
 .profil-links {
   margin-top: 113px;
   display: flex;
-  width: 100%;
+  width: 600px;
   justify-content: space-between;
 }
 .profile-link-item {
-  width: 65px;
-  height: 94px;
-  border-radius: 4px;
+  width: auto;
+  height: auto;
 }
 .image {
-  width: 65px;
-  height: 65px;
+  width: 85px;
+  height: 85px;
   background-color: black;
   border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .link {
   margin-top: 50px;
-  margin-left: 5px;
+  margin-left: 12px;
   text-decoration: none;
   color: #000;
   font-family: Inter;

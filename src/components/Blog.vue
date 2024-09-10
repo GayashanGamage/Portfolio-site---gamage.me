@@ -1,5 +1,5 @@
 <template>
-  <div class="level-one-container">
+  <div class="level-one-container" id="blog">
     <div class="level-two-container">
       <h3 class="title">BLOG</h3>
       <p class="blog-title">how to implement linear search in python</p>

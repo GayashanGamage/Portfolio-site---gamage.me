@@ -4,10 +4,12 @@
     <Intro></Intro>
     <Project></Project>
     <Tecstack></Tecstack>
+    <Blog></Blog>
   </div>
 </template>
 
 <script setup>
+import Blog from "./components/Blog.vue";
 import Intro from "./components/Intro.vue";
 import Menubar from "./components/Menubar.vue";
 import Project from "./components/Project.vue";

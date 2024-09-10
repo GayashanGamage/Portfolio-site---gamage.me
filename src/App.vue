@@ -3,6 +3,7 @@
     <Menubar></Menubar>
     <Intro></Intro>
     <Project></Project>
+    <Tecstack></Tecstack>
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import Intro from "./components/Intro.vue";
 import Menubar from "./components/Menubar.vue";
 import Project from "./components/Project.vue";
+import Tecstack from "./components/Tecstack.vue";
 </script>
 
 <style>

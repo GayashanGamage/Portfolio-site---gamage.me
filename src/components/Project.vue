@@ -3,40 +3,81 @@
     <div class="level-two-container">
       <h3 class="container-title">PROJECTS</h3>
       <div class="project-container">
-        <div class="project">
-          <div class="project-image"></div>
-          <h3 class="project-title">Sigiri Price</h3>
-          <p class="project-discription">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            possimus temporibus id illum! Dolore est vero fuga maxime provident
-            hic ipsam beatae, culpa nostrum, officia
-          </p>
+        <div class="project" v-for="item in projectData" :key="item.id">
+          <div class="project-image">
+            <img
+              :src="item.image"
+              alt="site-image"
+              class="project-image-file"
+            />
+          </div>
+          <h3 class="project-title">{{ item.name }}</h3>
+          <p class="project-discription">{{ item.discription }}</p>
           <div class="button-container">
-            <button class="more-button">More</button>
+            <button class="more-button" @click="openWindow(item.id)">
+              More
+            </button>
           </div>
         </div>
-        <div class="project">
-          <div class="project-image"></div>
-          <h3 class="project-title">DFernando.lk</h3>
-          <p class="project-discription">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            possimus temporibus id illum! Dolore est vero fuga maxime provident
-            hic ipsam beatae, culpa nostrum, officia
-          </p>
-          <div class="button-container">
-            <button class="more-button">More</button>
-          </div>
+      </div>
+    </div>
+    <!-- bluered popup window -->
+    <div class="popup-box" v-if="popup">
+      <!-- popup window -->
+      <div class="popup-window">
+        <!-- popup header -->
+        <div class="popup-header">
+          <h3 class="popup-title">{{ selected.name }}</h3>
+          <button id="close-button" @click="close">Close</button>
         </div>
-        <div class="project">
-          <div class="project-image"></div>
-          <h3 class="project-title">CurryHut.lk</h3>
-          <p class="project-discription">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            possimus temporibus id illum! Dolore est vero fuga maxime provident
-            hic ipsam beatae, culpa nostrum, officia
-          </p>
-          <div class="button-container">
-            <button class="more-button">More</button>
+        <div class="popup-content">
+          <div class="intro-video sub-part">
+            <h3 class="sub-hedding">What this is ?</h3>
+            <iframe
+              :src="selected.video"
+              class="video-fram"
+              frameborder="0"
+              width="560px"
+              height="300px"
+            ></iframe>
+          </div>
+          <div class="features sub-part">
+            <h3 class="sub-hedding">Features</h3>
+            <ol>
+              <li
+                v-for="item in selected.feature"
+                :key="item"
+                class="list-item"
+              >
+                {{ item }}
+              </li>
+            </ol>
+          </div>
+          <div class="technology sub-part">
+            <h3 class="sub-hedding">Tec stack</h3>
+            <ul>
+              <li
+                v-for="item in selected.technology"
+                :key="item"
+                class="list-item"
+              >
+                {{ item }}
+              </li>
+            </ul>
+          </div>
+          <div class="links sub-part">
+            <h3 class="sub-hedding">Project links</h3>
+            <!-- link buttons -->
+            <a
+              target="_blank"
+              v-for="item in selected.link"
+              :key="item"
+              :href="item.link"
+            >
+              <button class="link-button">
+                {{ item.btn_name }}
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -44,7 +85,146 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref, watch } from "vue";
+
+const popup = ref(false);
+const selected = ref(null);
+const projectData = [
+  {
+    id: 0,
+    name: "sigiriprice.me",
+    discription:
+      "price fluctuation is regular thing in sri lanka now a days. this webapp allow you to track price on 'sinhagiri.lk' store. if your tracked product price change you will get an e-mail notification",
+    image:
+      "https://drive.google.com/thumbnail?id=1nATXQn6EVbXzK8PAFLOFPL1x4rATg92P",
+    video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
+    feature: [
+      "authonticate as a user",
+      "book a date and timeslot",
+      "popspond selected time slot",
+      "cancel a booking and ask for refund",
+    ],
+    technology: ["FastAPI", "mongoDB", "VueJS", "HTML", "CSS"],
+    link: [
+      {
+        btn_name: "Live project",
+        link: "https://colorhunt.co/palettes/redeofwji",
+      },
+      {
+        btn_name: "API Documentation",
+        link: "https://stackoverflow.com/questions/7790725/javascript-track-mouse-position",
+      },
+      {
+        btn_name: "API - GitHub",
+        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+      },
+      {
+        btn_name: "Frontend - GitHub",
+        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+      },
+      { btn_name: "Admin pannel - GitHub", link: "https://gamage.me/" },
+    ],
+  },
+  {
+    id: 1,
+    name: "dfernando.lk",
+    discription: "online mentoring session booking platform",
+    image:
+      "https://drive.google.com/thumbnail?id=1nATXQn6EVbXzK8PAFLOFPL1x4rATg92P",
+    video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
+    feature: [
+      "authonticate as a user",
+      "book a date and timeslot",
+      "postpone selected time slot",
+      "cancel a booking and ask for refund",
+      "admin site for manage users and session time",
+      "payment gateway",
+      "video conferencing using zoom API",
+    ],
+    technology: [
+      "FastAPI",
+      "mongoDB",
+      "VueJS",
+      "HTML",
+      "CSS",
+      "ZOOM API for video conferencing",
+    ],
+    link: [
+      {
+        btn_name: "Live project",
+        link: "https://colorhunt.co/palettes/redeofwji",
+      },
+      {
+        btn_name: "API Documentation",
+        link: "https://stackoverflow.com/questions/7790725/javascript-track-mouse-position",
+      },
+      {
+        btn_name: "API - GitHub",
+        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+      },
+      {
+        btn_name: "Frontend - GitHub",
+        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+      },
+      { btn_name: "Admin pannel - GitHub", link: "https://gamage.me/" },
+    ],
+  },
+  {
+    id: 2,
+    name: "curryhut.lk",
+    discription: "online food odering webapp",
+    image:
+      "https://drive.google.com/thumbnail?id=1nATXQn6EVbXzK8PAFLOFPL1x4rATg92P",
+    video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
+    feature: [
+      "authonticate as a user",
+      "book a date and timeslot",
+      "popspond selected time slot",
+      "cancel a booking and ask for refund",
+    ],
+    technology: ["FastAPI", "mongoDB", "VueJS", "HTML", "CSS"],
+    link: [
+      {
+        btn_name: "Live project",
+        link: "https://colorhunt.co/palettes/redeofwji",
+      },
+      {
+        btn_name: "API Documentation",
+        link: "https://stackoverflow.com/questions/7790725/javascript-track-mouse-position",
+      },
+      {
+        btn_name: "API - GitHub",
+        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+      },
+      {
+        btn_name: "Frontend - GitHub",
+        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+      },
+      { btn_name: "Admin pannel - GitHub", link: "https://gamage.me/" },
+    ],
+  },
+];
+
+const close = () => {
+  popup.value = false;
+  selected.value = null;
+  document.body.style.overflow = "";
+};
+
+const openWindow = (item) => {
+  popup.value = true;
+  selected.value = projectData[item];
+  document.body.style.overflow = "hidden";
+};
+watch(popup, (current, past) => {
+  if (current === true) {
+    document.getElementById("project").style.overflow = "hidden";
+  } else {
+    console.log("popup is close");
+  }
+});
+</script>
 
 <style scoped>
 .level-one-container {
@@ -126,5 +306,96 @@
   color: #0b2f9f;
   border: 2px solid #0b2f9f;
   background-color: #f5f5f5;
+}
+.popup-box {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-window {
+  width: 600px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+}
+.popup-content {
+  max-height: 400px;
+  overflow: scroll;
+}
+#close-button {
+  margin: 0px 20px;
+  color: #fff;
+  padding: 6px 10px;
+  background-color: #0b2f9f;
+  border-radius: 6px;
+  border: 1px solid #fff;
+}
+#close-button:hover {
+  background-color: #f5f5f5;
+  color: #0b2f9f;
+  border: 1px solid #0b2f9f;
+}
+.video-fram {
+  border-radius: 6px;
+}
+.sub-part {
+  margin: 20px;
+}
+.project-image-file {
+  width: 100%;
+  height: 100%;
+}
+.popup-header {
+  border: 1px solid black;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  background-color: #0b2f9f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px 6px 0px 0px;
+}
+.popup-title {
+  color: #f5f5f5;
+  margin-left: 24px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.sub-hedding {
+  color: #0b2f9f;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 900;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.list-item {
+  color: #0b2f9f;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.link-button {
+  margin: 5px;
+  padding: 5px 10px;
+  background-color: #0b2f9f;
+  color: #f5f5f5;
+  border: 1px solid #0b2f9f;
+  border-radius: 4px;
+}
+.link-button:hover {
+  background-color: #fff;
+  color: #0b2f9f;
+  border: 1px solid #0b2f9f;
+  border-radius: 4px;
 }
 </style>

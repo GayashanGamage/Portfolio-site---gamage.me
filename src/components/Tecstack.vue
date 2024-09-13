@@ -80,8 +80,8 @@
   margin: 80px 0px;
 }
 .level-four-container {
-  background-color: #0b2f9f;
-  color: #ffffff;
+  background-color: #fff;
+  color: #0b2f9f;
   height: 37px;
   margin-bottom: 19px;
   width: 185px;
@@ -93,6 +93,7 @@
   line-height: normal;
   display: flex;
   align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .title {
   grid-area: title;
@@ -125,7 +126,7 @@
 .icon {
   width: 30px;
   height: 30px;
-  background-color: #ffffff;
+  background-color: #0b2f9f;
   border-radius: 4px;
   margin: 2px 10px 2px 4px;
 }

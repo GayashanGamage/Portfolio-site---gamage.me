@@ -109,21 +109,20 @@ const projectData = [
     link: [
       {
         btn_name: "Live project",
-        link: "https://colorhunt.co/palettes/redeofwji",
+        link: "https://sigiriprice.gamage.me/",
       },
       {
         btn_name: "API Documentation",
-        link: "https://stackoverflow.com/questions/7790725/javascript-track-mouse-position",
+        link: "https://api-sigiriprice.gamage.me/docs#/",
       },
       {
         btn_name: "API - GitHub",
-        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+        link: "https://github.com/GayashanGamage/sinha.price-backend",
       },
       {
         btn_name: "Frontend - GitHub",
-        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+        link: "https://github.com/GayashanGamage/sigiri-price",
       },
-      { btn_name: "Admin pannel - GitHub", link: "https://gamage.me/" },
     ],
   },
   {
@@ -153,21 +152,24 @@ const projectData = [
     link: [
       {
         btn_name: "Live project",
-        link: "https://colorhunt.co/palettes/redeofwji",
+        link: "https://dineshfernando.netlify.app",
       },
       {
         btn_name: "API Documentation",
-        link: "https://stackoverflow.com/questions/7790725/javascript-track-mouse-position",
+        link: "https://api.gamage.me/docs",
       },
       {
         btn_name: "API - GitHub",
-        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+        link: "https://github.com/GayashanGamage/coaching-backend",
       },
       {
         btn_name: "Frontend - GitHub",
-        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
+        link: "https://github.com/GayashanGamage/Dr.Dinesh-frontend",
       },
-      { btn_name: "Admin pannel - GitHub", link: "https://gamage.me/" },
+      {
+        btn_name: "Admin pannel - GitHub",
+        link: "https://df-backoffice.netlify.app",
+      },
     ],
   },
   {

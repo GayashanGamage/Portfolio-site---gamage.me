@@ -8,29 +8,85 @@
       </p>
       <div class="profil-links">
         <div class="profile-link-item">
-          <div class="image"></div>
+          <div class="image">
+            <img
+              src="https://drive.google.com/thumbnail?id=1ZwK62FCRqpHhq7U0EhI8WMK73WV-cuYK"
+              alt="github logo"
+              class="logo-image"
+            />
+          </div>
           <br />
-          <a href="" class="link">GitHub</a>
+          <a
+            href="https://github.com/GayashanGamage"
+            target="_self"
+            class="link"
+            >GitHub</a
+          >
         </div>
         <div class="profile-link-item">
-          <div class="image"></div>
+          <div class="image">
+            <img
+              src="https://drive.google.com/thumbnail?id=1TI3h8zcMvb1NmWtQZP3V9-KdOom6aILN"
+              alt="medium logo"
+              class="logo-image"
+            />
+          </div>
           <br />
-          <a href="" class="link">Leetcode</a>
+          <a
+            href="https://leetcode.com/u/GayashanGamage/"
+            class="link"
+            target="_blank"
+            >Leetcode</a
+          >
         </div>
         <div class="profile-link-item">
-          <div class="image"></div>
+          <div class="image">
+            <img
+              src="https://drive.google.com/thumbnail?id=1l-erePre2C4pAPnS4vRkESCpvpBbWb0Z"
+              alt="medium icon"
+              class="logo-image"
+            />
+          </div>
           <br />
-          <a href="" class="link">Medium</a>
+          <a
+            href="https://medium.com/@gayashangamage"
+            class="link"
+            target="_blank"
+            >Medium</a
+          >
         </div>
         <div class="profile-link-item">
-          <div class="image"></div>
+          <div class="image">
+            <img
+              src="https://drive.google.com/thumbnail?id=1ZlYIpZoPcq8Km_DSKUJldT6CookzSkm4"
+              alt="linkedin icon"
+              class="logo-image"
+            />
+          </div>
           <br />
-          <a href="" class="link">LinkedIn</a>
+          <a
+            href="https://www.linkedin.com/in/gayashangamage/"
+            class="link"
+            target="_blank"
+            >LinkedIn</a
+          >
         </div>
         <div class="profile-link-item">
-          <div class="image"></div>
+          <div class="image">
+            <img
+              src="https://drive.google.com/thumbnail?id=108sBvRAKcymJSIFqzjv6OXTg8F97ZS7e"
+              alt="CV icon"
+              class="logo-image"
+            />
+          </div>
           <br />
-          <a href="" class="link">Resume</a>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1N1wJE5aPCbiF_sIZzeFY8s3whJrUyI2W"
+            target="_blank"
+            class="link"
+          >
+            Resume
+          </a>
         </div>
       </div>
     </div>
@@ -83,8 +139,7 @@
 .image {
   width: 85px;
   height: 85px;
-  background-color: black;
-  border-radius: 4px;
+  border-radius: 12px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .link {
@@ -100,5 +155,11 @@
 }
 .profile-link-item:hover {
   text-decoration: underline;
+}
+.logo-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 0px;
 }
 </style>

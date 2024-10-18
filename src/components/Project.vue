@@ -31,7 +31,7 @@
           <button id="close-button" @click="close">Close</button>
         </div>
         <div class="popup-content">
-          <div class="intro-video sub-part">
+          <!-- <div class="intro-video sub-part">
             <h3 class="sub-hedding">What this is ?</h3>
             <iframe
               :src="selected.video"
@@ -40,7 +40,7 @@
               width="560px"
               height="300px"
             ></iframe>
-          </div>
+          </div> -->
           <div class="features sub-part">
             <h3 class="sub-hedding">Features</h3>
             <ol>
@@ -97,8 +97,8 @@ const projectData = [
     discription:
       "price fluctuation is regular thing in sri lanka now a days. this webapp allow you to track price on 'sinhagiri.lk' store. if your tracked product price change you will get an e-mail notification",
     image:
-      "https://drive.google.com/thumbnail?id=1nATXQn6EVbXzK8PAFLOFPL1x4rATg92P",
-    video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
+      "https://drive.google.com/thumbnail?id=1EGfg0HiR9cn5-NO-2EtJxwL4oeeFQ9m_",
+    // video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
     feature: [
       "authonticate as a user",
       "book a date and timeslot",
@@ -125,21 +125,68 @@ const projectData = [
       },
     ],
   },
+  // {
+  //   id: 1,
+  //   name: "dfernando.lk",
+  //   discription: "online mentoring session booking platform",
+  //   image:
+  //     "https://drive.google.com/thumbnail?id=1nATXQn6EVbXzK8PAFLOFPL1x4rATg92P",
+  //   video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
+  //   feature: [
+  //     "authonticate as a user",
+  //     "book a date and timeslot",
+  //     "postpone selected time slot",
+  //     "cancel a booking and ask for refund",
+  //     "admin site for manage users and session time",
+  //     "payment gateway",
+  //     "video conferencing using zoom API",
+  //   ],
+  //   technology: [
+  //     "FastAPI",
+  //     "mongoDB",
+  //     "VueJS",
+  //     "HTML",
+  //     "CSS",
+  //     "ZOOM API for video conferencing",
+  //   ],
+  //   link: [
+  //     {
+  //       btn_name: "Live project",
+  //       link: "https://dineshfernando.netlify.app",
+  //     },
+  //     {
+  //       btn_name: "API Documentation",
+  //       link: "https://api.gamage.me/docs",
+  //     },
+  //     {
+  //       btn_name: "API - GitHub",
+  //       link: "https://github.com/GayashanGamage/coaching-backend",
+  //     },
+  //     {
+  //       btn_name: "Frontend - GitHub",
+  //       link: "https://github.com/GayashanGamage/Dr.Dinesh-frontend",
+  //     },
+  //     {
+  //       btn_name: "Admin pannel - GitHub",
+  //       link: "https://df-backoffice.netlify.app",
+  //     },
+  //   ],
+  // },
   {
     id: 1,
-    name: "dfernando.lk",
-    discription: "online mentoring session booking platform",
+    name: "curryhut.lk - ongoin real project",
+    discription:
+      "online food odering webapp for curryhut restaurent in Narahenpita",
     image:
-      "https://drive.google.com/thumbnail?id=1nATXQn6EVbXzK8PAFLOFPL1x4rATg92P",
-    video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
+      "https://drive.google.com/thumbnail?id=1vxuA_ncfWS3e9FQUI6xEbdvM2Rp4WvI-",
+    // video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
     feature: [
-      "authonticate as a user",
-      "book a date and timeslot",
-      "postpone selected time slot",
-      "cancel a booking and ask for refund",
-      "admin site for manage users and session time",
-      "payment gateway",
-      "video conferencing using zoom API",
+      "authonticate users",
+      "role base access - admin & customers",
+      "fully managable category - product and menu of the day",
+      "integrate with mobile message for ordering process and delivery",
+      "mobile optimization",
+      "online payment integration with payheree",
     ],
     technology: [
       "FastAPI",
@@ -147,63 +194,29 @@ const projectData = [
       "VueJS",
       "HTML",
       "CSS",
-      "ZOOM API for video conferencing",
+      "notify.lk - message API",
+      "transactional email API : brevo",
+      "payhere.lk - payment gatway",
+      "digitalocean.com - space - object storage",
     ],
     link: [
       {
-        btn_name: "Live project",
-        link: "https://dineshfernando.netlify.app",
-      },
-      {
         btn_name: "API Documentation",
-        link: "https://api.gamage.me/docs",
+        link: "http://api-curryhut.gamage.me/docs",
       },
       {
         btn_name: "API - GitHub",
-        link: "https://github.com/GayashanGamage/coaching-backend",
+        link: "https://github.com/GayashanGamage/curryhut-API",
       },
       {
-        btn_name: "Frontend - GitHub",
-        link: "https://github.com/GayashanGamage/Dr.Dinesh-frontend",
+        btn_name: "admin - GitHub",
+        link: "https://github.com/GayashanGamage/curryhut-admin",
       },
+      { btn_name: "Admin pannel", link: "https://admin-curryhut.gamage.me" },
       {
-        btn_name: "Admin pannel - GitHub",
-        link: "https://df-backoffice.netlify.app",
+        btn_name: "Figma file",
+        link: "https://www.figma.com/design/oHJfgEMeF7Jjp12QrgE2NE/CurryHut.lk?node-id=173-823&m=dev",
       },
-    ],
-  },
-  {
-    id: 2,
-    name: "curryhut.lk",
-    discription: "online food odering webapp",
-    image:
-      "https://drive.google.com/thumbnail?id=1nATXQn6EVbXzK8PAFLOFPL1x4rATg92P",
-    video: "https://www.youtube.com/embed/aViuBgbokmI?autoplay=1&controls=0",
-    feature: [
-      "authonticate as a user",
-      "book a date and timeslot",
-      "popspond selected time slot",
-      "cancel a booking and ask for refund",
-    ],
-    technology: ["FastAPI", "mongoDB", "VueJS", "HTML", "CSS"],
-    link: [
-      {
-        btn_name: "Live project",
-        link: "https://colorhunt.co/palettes/redeofwji",
-      },
-      {
-        btn_name: "API Documentation",
-        link: "https://stackoverflow.com/questions/7790725/javascript-track-mouse-position",
-      },
-      {
-        btn_name: "API - GitHub",
-        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
-      },
-      {
-        btn_name: "Frontend - GitHub",
-        link: "https://medium.com/@humbleCoder007/title-mastering-window-scroll-events-in-javascript-416607be8852",
-      },
-      { btn_name: "Admin pannel - GitHub", link: "https://gamage.me/" },
     ],
   },
 ];

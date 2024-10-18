@@ -18,7 +18,7 @@
           <br />
           <a
             href="https://github.com/GayashanGamage"
-            target="_self"
+            target="_blank"
             class="link"
             >GitHub</a
           >

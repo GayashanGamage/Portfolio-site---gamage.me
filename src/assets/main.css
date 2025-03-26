@@ -1,9 +1,1 @@
-:root {
-  --background-color: #fff7fc;
-  --font-color: #5755fe;
-  --button-background-color: #5755fe;
-  --background-color-content: #5755fe;
-  --button-font-size: 1.5rem;
-  --button-font-color: #fff7fc;
-  --button-hover-color: #8b93ff;
-}
+@import "tailwindcss";

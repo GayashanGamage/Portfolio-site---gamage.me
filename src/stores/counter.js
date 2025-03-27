@@ -115,7 +115,7 @@ export const portfolioStore = defineStore("Portfolio", () => {
             'name' : 'Curry Hut',
             'description' : 'Delivery companies like Uber and Pickme charge 20% food price + Delivery charges. but curry hut is a platform that connects customers directly with the restaurant. So the restaurent owner can save 20% of the food price and custorms can enjoy Free Delivery charges. win win situation for both parties.',
             'techStack' : [techStack[0], techStack[1], techStack[4], techStack[5], techStack[6], techStack[8], techStack[10]],
-            'main_image' : 'public/curryhut.webp',
+            'main_image' : '/curryhut.webp',
             'links' : [
                 {
                     'icon' : 'language',
@@ -138,7 +138,7 @@ export const portfolioStore = defineStore("Portfolio", () => {
             'name' : 'Sigiri Price',
             'description' : 'Price fluctuation in e-commerce platforms is a common issue. Sigiri Price is a web application that helps to track the price changes of products in sinhagiri.lk e-commerce platforms.',
             'techStack' : [techStack[4], techStack[5], techStack[6], techStack[8]],
-            'main_image' : 'public/sigiri price.png',
+            'main_image' : '/sigiri price.png',
             'links' : [
                 {
                     'icon' : 'language',
@@ -161,7 +161,7 @@ export const portfolioStore = defineStore("Portfolio", () => {
             'name' : 'FingureTune',
             'description' : 'Stay on your confort zoon and try master keyborde with realtime analitics ',
             'techStack' : [techStack[4], techStack[5], techStack[6]],
-            'main_image' : 'public/finguretune.png',
+            'main_image' : '/finguretune.png',
             'links' : [
                 {
                     'icon' : 'language',

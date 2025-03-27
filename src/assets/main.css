@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.scroll-offset {
+    scroll-margin-top: 210px; /* Adjust the value as needed */
+  }

@@ -1,34 +1,37 @@
 <template>
   <!-- menu section -->
-  <div class="flex justify-center pt-10 ">
-    <div class="flex flex-row items-center w-4/10 p-2 justify-between border-b">
+  <div class="flex justify-center pt-10 fixed top-0 w-full bg-white z-50">
+    <div class="flex flex-row items-center w-4/10 p-2 justify-between border-b border-b-gray-400">
       <h1 class="text-2xl font-bold font-sans">GAMAGE.ME</h1>
       <div class="flex flex-row items-center space-x-4 gap-8">
-        <p class="text-xl font-medium font-sans hover:cursor-pointer">Tech Stack</p>
-        <p class="text-xl font-medium font-sans hover:cursor-pointer">Projects</p>
-        <p class="px-8 py-2 text-gray-50 bg-black rounded-lg text-md text-lg font-medium font-sans border hover:bg-white hover:border hover:text-black hover:cursor-pointer hover:font-medium">CV</p>
+        <p class="text-xl font-medium font-sans hover:cursor-pointer"><a href="#techstack" class="scroll-mt-35">Tech Stack</a></p>
+        <p class="text-xl font-medium font-sans hover:cursor-pointer scroll-mt-35"><a href="#project">Projects</a></p>
+        <p class="text-xl font-medium font-sans hover:cursor-pointer scroll-mt-35"><a href="#contact">Contact</a></p>
+        <p class="px-8 py-1 text-gray-50 bg-black rounded-lg text-md text-lg font-medium font-sans border hover:bg-white hover:border hover:text-black hover:cursor-pointer hover:font-medium"><a href="https://drive.google.com/uc?export=download&id=11mZ6NgNagNYjkrgP1jzFnGr9eXvbHviv">CV</a></p>
       </div>
     </div>
   </div>  
   <!-- intro section -->
-  <div class="flex justify-center py-10">
+  <div class="flex justify-center pt-36 pb-6">
     <div class="flex w-4/10 h-auto py-8 gap-12">
       <!-- image -->
-      <img src="/public/gayashan.jpg" alt="Gayashan Gamage's image" class="rounded-full w-50 h-50">
+       <div class=" w-82 h-52 rounded-full bg-amber-950 flex justify-center items-center">
+         <img src="/public/gayashan.jpg" alt="Gayashan Gamage's image" class="rounded-full w-50 h-50">
+       </div>
       <!-- introduction text -->
       <div class="w-full">
-        <p><span class="text-2xl font-bold uppercase">Hi.. I'm Gayashan.<br> Fulstack developer with<br> learning mindset </span><br><span class="bg-emerald-200 px-3 py-1 rounded-4xl text-xl font-bold text-green-600"><span class="p-1.5 mb-px mr-1.5 inline-block bg-green-600 rounded-full"></span>  Open to work</span></p>
+        <p><span class="text-2xl font-bold leading-normal">Hi.. I'm Gayashan.<br> Fulstack developer with learning mindset </span><br><span class="bg-emerald-200 px-3 py-1 rounded-4xl text-xl font-bold text-green-600 leading-loose"><span class="p-1.5 mb-px mr-1.5 inline-block bg-green-600 rounded-full "></span>  Open to work</span></p>
         <!-- location and link section -->
-        <div class="flex flex-row w-full justify-between pt-12">
-          <p class="font-sans text-xl">Galle, Sri Lanka</p>
+        <div class="flex flex-row w-full justify-between pt-8">
+          <p class="font-sans text-xl flex flex-row"><span class="material-icons">location_on</span>Galle, Sri Lanka</p>
           <!-- link section -->
             <div class="flex flex-row gap-3">
-              <div>
+              <div class="hover:scale-103">
                 <a :href="store.profileLinks.linkedin" target="_blank"  class="font-sans text-xl flex flex-row gap-2">
                 <img :src="store.profileLinkIcons.linkedin" alt="linkedin icon" class="w-6 h-6">
                 <p>LinkedIn</p></a>
               </div>
-              <div>
+              <div class="hover:scale-103">
                 <a :href="store.profileLinks.github" target="_blank"  class="font-sans text-xl flex flex-row gap-2">
                 <img :src="store.profileLinkIcons.github" alt="linkedin icon" class="w-6 h-6">
                 <p>GitHub</p></a>
@@ -45,8 +48,9 @@
   <!-- tech stack section -->
   <div class="flex justify-center py-10">
     <div class="flex flex-col w-4/10 h-auto">
-      <h3 class="font-bold text-2xl pb-6 font-sans">TECH STACK</h3>
-      <div class="flex flex-wrap gap-3 justify-between">
+      <h3 class="font-bold text-2xl pb-1 font-sans scroll-mt-35" id="techstack">TECH STACK</h3>
+      <hr class="border-t border-t-gray-400 pb-8">
+      <div class="flex flex-wrap gap-5 justify">
         <div v-for="item in store.techStack" class="rounded-md w-1/7 h-25 flex flex-col justify-center items-center gap-2 shadow-sm border border-gray-200">
           <img :src="item.icon" :alt="item.name" class="w-8 h-8">
           <p class="font-sans">{{ item.name }}</p>
@@ -56,9 +60,12 @@
   </div>
   <!-- project section -->
   <div class="flex justify-center py-10">
-    <div class="flex flex-col w-4/10 h-auto gap-5">
-      <h3 class="font-bold text-2xl pb-6 font-sans">PROJECTS</h3>
-      <div class="flex flex-col p-4 gap-6 shadow-sm border border-gray-300 rounded-md" v-for="item in store.projectData"> 
+    <div class="flex flex-col w-4/10 h-auto gap-10">
+      <div>
+        <h3 class="font-bold text-2xl pb-1 font-sans scroll-mt-35" id="project">PROJECTS</h3>
+        <hr class="border-t border-t-gray-400 pb-1">
+      </div>
+      <div class="flex flex-col p-4 gap-8 border border-gray-300 rounded-md" v-for="item in store.projectData"> 
         <!-- <div class="bg-amber-700 w-full h-120 border"></div> -->
          <img :src="item.main_image" alt="item.name" class="w-full h-80 rounded-md">
         <h4 class="font-bold text-2xl font-sans">{{ item.name }}</h4>
@@ -66,18 +73,28 @@
         <!-- tech stack container -->
         <div class="flex flex-row gap-2 flex-wrap">
           <!-- selected tech stack -->
-          <div class=" flex gap-1 px-6 py-1 rounded-2xl bg-gray-200" v-for="i in item.techStack">
-            <img :src="i.icon" :alt="i.name" class="w-6 h-6">
-            <p>{{ i.name }}</p>
+          <div class=" flex flex-row gap-3 px-6 py-1 rounded-2xl bg-gray-100 border border-gray-300" v-for="i in item.techStack">
+            <img :src="i.icon" :alt="i.name" class="w-5 h-5">
+            <p class="font-light font-sans">{{ i.name }}</p>
           </div>
         </div>
         <!-- project links -->
          <div class="flex flex-row justify-between gap-4">
-          <div class="flex flex-row border w-1/3 py-1 rounded-3xl border-gray-400 justify-center items-center hover:cursor-pointer" v-for="i in item.links">
-            <span class="material-icons px-3">{{ i.icon }}</span>
+          <div class="flex flex-row w-1/3 py-1 rounded-3xl justify-center items-center hover:cursor-pointer bg-[#3a6b7e] text-[#dfdfde] hover:bg-[#294b58] hover:text-[#ececeb]" v-for="i in item.links">
+            <span class="material-icons px-3 ">{{ i.icon }}</span>
             <p class="uppercase font-sans">{{ i.text }}</p>
           </div>
          </div>
+      </div>
+    </div>
+  </div>
+  <!-- contact section -->
+  <div class="flex justify-center py-10">
+    <div class="flex flex-col w-4/10 h-auto">
+      <hr class="border-t border-t-gray-400 pb-8" id="contact">
+      <div class="flex flex-row justify-between font-sans">
+        <p class="flex flex-row gap-3"><span class="material-icons text-gray-400">email</span>gayashan.randimagamage@gmail.com</p>
+        <p class="flex flex-row gap-3"><span class="material-icons text-gray-400">call</span>+94706697900</p>
       </div>
     </div>
   </div>

@@ -23,7 +23,7 @@
         <p><span class="text-2xl font-bold leading-normal">Hi.. I'm Gayashan.<br> Fulstack developer with learning mindset </span><br><span class="bg-emerald-200 px-3 py-1 rounded-4xl text-xl font-bold text-green-600 leading-loose"><span class="p-1.5 mb-px mr-1.5 inline-block bg-green-600 rounded-full "></span>  Open to work</span></p>
         <!-- location and link section -->
         <div class="flex flex-row w-full justify-between pt-8">
-          <p class="font-sans text-xl flex flex-row"><span class="material-icons">location_on</span>Galle, Sri Lanka</p>
+          <p class="font-sans text-xl flex flex-row"><span class="material-icons">location_on</span>Nawala, Sri Lanka</p>
           <!-- link section -->
             <div class="flex flex-row gap-3">
               <div class="hover:scale-103">
@@ -50,8 +50,16 @@
     <div class="flex flex-col w-4/10 h-auto">
       <h3 class="font-bold text-2xl pb-1 font-sans scroll-mt-35" id="techstack">TECH STACK</h3>
       <hr class="border-t border-t-gray-400 pb-8">
+      <div class="flex flex-row gap-4 pb-8">
+        <button class="category-button flex flow-row justify-center items-center border px-4 py-1 rounded-2xl border-gray-600 hover:cursor-pointer hover:text-amber-50 hover:bg-gray-600 hover:border-gray-600 bg-gray-600 text-amber-50" v-on:click=categorySelection(-1) id="cat0">
+          All
+        </button>
+        <button class="category-button flex flow-row justify-center items-center border px-4 py-1 rounded-2xl border-gray-400 hover:cursor-pointer hover:text-amber-50 hover:bg-gray-600 hover:border-gray-600" v-for="(item, index) in store.techStackTypes" v-on:click=categorySelection(index) :id="'cat' + (index + 1)">
+          {{ item }}
+        </button>
+      </div>
       <div class="flex flex-wrap gap-5 justify">
-        <div v-for="item in store.techStack" class="rounded-md w-1/7 h-25 flex flex-col justify-center items-center gap-2 shadow-sm border border-gray-200">
+        <div v-for="item in techList" class="rounded-md w-1/7 h-25 flex flex-col justify-center items-center gap-2 shadow-sm border border-gray-200">
           <img :src="item.icon" :alt="item.name" class="w-8 h-8">
           <p class="font-sans">{{ item.name }}</p>
         </div>
@@ -104,6 +112,51 @@
 import { ref } from 'vue';
 import { portfolioStore } from './stores/counter';
 const store =  portfolioStore()
+
+const selectedCategory = ref('all')
+const techList = ref(store.techStack)
+
+const selectCategoryButton = (indexNum) => {
+  // select the category all category  buttons
+  const categoryButton = document.querySelectorAll('.category-button')
+
+  // remove selected styles
+  for (let i = 0; i < categoryButton.length; i++) {
+    categoryButton[i].classList.remove('bg-gray-600')
+    categoryButton[i].classList.remove('text-amber-50')
+    categoryButton[i].classList.add('border-gray-600')
+  }
+
+  // add selected styles to the selected category button
+  document.getElementById('cat' + (indexNum + 1)).classList.add('bg-gray-600')
+  document.getElementById('cat' + (indexNum + 1)).classList.add('text-amber-50')
+  document.getElementById('cat' + (indexNum + 1)).classList.remove('border-gray-600')
+
+
+}
+
+
+const categorySelection = (indexNum) => {
+  // select the category
+  if(indexNum === -1) {
+    selectedCategory.value = 'all'
+  }else{
+    selectedCategory.value = store.techStackTypes[indexNum]
+  }
+  
+  // select relevant tech stack
+  if (selectedCategory.value === 'all') {
+    techList.value = store.techStack
+  }else{
+    techList.value = store.techStack.filter((item) => {
+      return item.type === selectedCategory.value
+    })
+  }
+
+  // highlight the selected category button
+  selectCategoryButton(indexNum)
+
+}
 
 </script>
 

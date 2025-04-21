@@ -57,7 +57,7 @@ export const portfolioStore = defineStore("Portfolio", () => {
         {
             'id' : 5,
             'type' : techStackTypes[1],
-            'name' : 'Tailwind CSS',
+            'name' : 'Tailwind',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" 
         },
         {

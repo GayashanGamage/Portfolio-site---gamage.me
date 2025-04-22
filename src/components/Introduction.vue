@@ -14,9 +14,9 @@
             <span class="material-icons">location_on</span>
             <p class=""> Colombo, Sri Lanka</p>
           </div>
-          <div class="flex flex-row gap-4 flex-wrap justify-center">
-            <div class="border-2 border-[#393E46] px-4 py-1 rounded-md bg-[#393E46] text-[#EEEEEE]/50 hover:text-[#EEEEEE]/80 hover:border-[#EEEEEE]/80 cursor-pointer" v-for="item in profileLink">
-              <a :href="item.link" class="">
+          <div class="flex flex-row gap-2 md:justify-start justify-center flex-wrap">
+            <div class="border-2 border-[#393E46] px-3 py-1 rounded-md bg-[#393E46] text-[#EEEEEE]/50 hover:text-[#EEEEEE]/80 hover:border-[#EEEEEE]/80 cursor-pointer" v-for="item in store.profileLink">
+              <a :href="item.link" class="" target="_blank">
                 <p class="">{{ item.name }}</p>
               </a>
             </div>
@@ -26,30 +26,32 @@
     </div>
   </template>
   <script setup>
-  import { ref } from 'vue';
-  
-  const profileLink = ref([
-    {
-      'name' : 'GitHub',
-      'link' : ''
-    },
-    {
-      'name' : 'LeetCode',
-      'link' : ''
-    },
-    {
-      'name' : 'Codepen',
-      'link' : ''
-    },
-    {
-      'name' : 'Medium',
-      'link' : ''
-    },
-    {
-      'name' : 'CV',
-      'link' : ''
-    },
-  ])
+import { portfolioStore } from '@/stores/counter';
+
+const store = portfolioStore()
+
+  // const profileLink = ref([
+  //   {
+  //     'name' : 'GitHub',
+  //     'link' : ''
+  //   },
+  //   {
+  //     'name' : 'LeetCode',
+  //     'link' : ''
+  //   },
+  //   {
+  //     'name' : 'Codepen',
+  //     'link' : ''
+  //   },
+  //   {
+  //     'name' : 'Medium',
+  //     'link' : ''
+  //   },
+  //   {
+  //     'name' : 'CV',
+  //     'link' : ''
+  //   },
+  // ])
   
   </script>
   <style scoped></style>

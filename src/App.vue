@@ -1,4 +1,5 @@
 <template>
+  <Menubar></Menubar>
   <Introduction></Introduction>
   <Techstack></Techstack>
   <Projects></Projects>
@@ -7,6 +8,7 @@
 <script setup>
 import Footer from './components/footer.vue';
 import Introduction from './components/Introduction.vue';
+import Menubar from './components/menubar.vue';
 import Projects from './components/projects.vue';
 import Techstack from './components/techstack.vue';
 

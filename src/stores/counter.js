@@ -8,11 +8,39 @@ export const portfolioStore = defineStore("Portfolio", () => {
         'github' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
         }
     
-    const profileLinks = {
-        'medium' : 'https://medium.com/@gayashangamage',
-        'linkedin' : 'https://www.linkedin.com/in/gayashangamage/',
-        'github' : 'https://github.com/GayashanGamage'
-        }
+    // const profileLinks = {
+    //     'medium' : 'https://medium.com/@gayashangamage',
+    //     'linkedin' : 'https://www.linkedin.com/in/gayashangamage/',
+    //     'github' : 'https://github.com/GayashanGamage'
+    //     }
+
+    const profileLink = ref([
+        {
+          'name' : 'GitHub',
+          'link' : 'https://github.com/GayashanGamage'
+        },
+        {
+          'name' : 'LeetCode',
+          'link' : 'https://leetcode.com/u/GayashanGamage/'
+        },
+        {
+          'name' : 'Codepen',
+          'link' : 'https://codepen.io/GayashanGamage'
+        },
+        {
+          'name' : 'Medium',
+          'link' : 'https://medium.com/@gayashangamage'
+        },
+        {
+          'name' : 'CV',
+          'link' : 'https://drive.google.com/uc?export=download&id=11mZ6NgNagNYjkrgP1jzFnGr9eXvbHviv'
+        },
+        {
+          'name' : 'LinkeIn',
+          'link' : 'https://www.linkedin.com/in/gayashangamage/'
+        },
+      ])
+
 
     const techStackTypes = [
         'language',
@@ -184,7 +212,8 @@ export const portfolioStore = defineStore("Portfolio", () => {
 
     return{
         profileLinkIcons,
-        profileLinks,
+        // profileLinks,
+        profileLink,
         techStackTypes,
         techStack,
         projectData,

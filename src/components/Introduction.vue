@@ -15,7 +15,7 @@
             <p class=""> Colombo, Sri Lanka</p>
           </div>
           <div class="flex flex-row gap-4 flex-wrap justify-center">
-            <div class="border-2 border-[#393E46] px-4 py-1 rounded-md text-[#EEEEEE]/30 hover:text-[#EEEEEE]/80 hover:border-[#EEEEEE]/80 hover:bg-[#393E46]" v-for="item in profileLink">
+            <div class="border-2 border-[#393E46] px-4 py-1 rounded-md bg-[#393E46] text-[#EEEEEE]/50 hover:text-[#EEEEEE]/80 hover:border-[#EEEEEE]/80 cursor-pointer" v-for="item in profileLink">
               <a :href="item.link" class="">
                 <p class="">{{ item.name }}</p>
               </a>

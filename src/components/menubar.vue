@@ -1,7 +1,7 @@
 <template>
     <div class="w-full h-[20px] bg-[#222831]">
         <div class="flex flex-row justify-between max-w-3xl w-auto h-auto py-5 mx-auto text-[#EEEEEE]/60 md:px-0 px-4">
-            <h1 class="text-2xl font-bold uppercase text-[#EEEEEE]/80 md:ml-0">Gamage.me</h1>
+            <h1 class="text-2xl font-bold uppercase text-[#EEEEEE]/80 md:ml-0">Gamage.dev</h1>
             <div class="md:block hidden">
                 <ul class="flex flex-row gap-10 cursor-default">
                     <li class="hover:underline">

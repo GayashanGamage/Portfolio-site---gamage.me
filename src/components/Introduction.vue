@@ -2,7 +2,7 @@
     <!-- introduction part -->
     <div class="w-full h-auto bg-[#222831] py-20">
       <!-- content container -->
-      <div class="flex md:flex-row flex-col justify-center items-center md:gap-10 gap-4 max-w-3xl min-w-[200px] w-auto h-auto mx-auto">
+      <div class="flex md:flex-row flex-col justify-center items-center md:gap-10 gap-4 max-w-3xl min-w-[200px] w-auto h-auto mx-auto px-10 md:px-0">
         <!-- image -->
         <div class="flex flex-row justify-center items-center w-[180px] h-[180px] rounded-full bg-[#393E46]">
           <img src="/public/gayashan.jpg" alt="" class="rounded-full w-9/10 h-9/10">

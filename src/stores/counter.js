@@ -79,59 +79,72 @@ export const portfolioStore = defineStore("Portfolio", () => {
         {
             'id' : 4,
             'type' : techStackTypes[1],
-            'name' : 'Vue.js',
-            'icon' : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg'
-        },
-        {
-            'id' : 5,
-            'type' : techStackTypes[1],
             'name' : 'Tailwind',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" 
         },
         {
+            'id' : 5,
+            'type' : techStackTypes[1],
+            'name' : 'Vue.js',
+            'icon' : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg'
+        },
+        {
             'id' : 6,
+            'type' : techStackTypes[1],
+            'name' : 'Nuxt.js',
+            'icon' : 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg'
+        },
+        {
+            'id' : 7,
             'type' : techStackTypes[2],
             'name' : 'FastAPI',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg"
         },
         {
-            'id' : 7,
+            'id' : 8,
             'type' : techStackTypes[2],
             'name' : 'Flask',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg"
         },
         {
-            'id' : 8,
+            'id' : 9,
             'type' : techStackTypes[3],
             'name' : 'MongoDB',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg"
         },
         {
-            'id' : 9,
+            'id' : 10,
             'type' : techStackTypes[3],
             'name' : 'Supabase',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg"
         },
         {
-            'id' : 10,
+            'id' : 11,
+            'type' : techStackTypes[3],
+            'name' : 'Redis',
+            'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg"
+          
+        },
+        {
+            'id' : 12,
             'type' : techStackTypes[4],
             'name' : 'Docker',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg"
         },
         {
-            'id' : 11,
+            'id' : 13,
             'type' : techStackTypes[4],
             'name' : 'AWS',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
         },
         {
-            'id' : 12,
+            'id' : 14,
             'type' : techStackTypes[5],
             'name' : 'Postman',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
         },
         {
-            'id' : 13,
+            'id' : 15,
             'type' : techStackTypes[5],
             'name' : 'GIT',
             'icon' : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"

@@ -7,7 +7,8 @@
         <Project></Project>
         <Certificates></Certificates>
         <Contact></Contact>
-    </div>
+        <Footer></Footer>
+    </div>  
 </template>
 <script setup>
 import About from '@/components/about.vue';
@@ -17,5 +18,6 @@ import Intro from '@/components/intro.vue';
 import Project from '@/components/project.vue';
 import Sidebar from '@/components/sidebar.vue';
 import Skills from '@/components/skills.vue';
+import Footer from '@/components/footer.vue';
 
 </script>

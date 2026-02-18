@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-screen">
+    <div class="w-full h-screen" id="contact">
         <div class="flex flex-col justify-center w-[80%] p-10 mx-auto h-full border">
             <div class="flex flex-col gap-30 ">
                 <h3 class="text-center font-[Manrope] font-black text-4xl">Contact me</h3>

@@ -14,15 +14,21 @@
                 <div class="flex flex-col gap-4 pt-10 w-fit ml-auto">
                     <!-- profile links -->
                     <div class="flex flex-row gap-6 w-fit ml-auto">
-                        <div class="flex flex-col justify-center items-center border rounded-full h-12 w-12" v-for="item in profileLinks">
-                            <i :class="item.icon" class="text-2xl"></i>
+                        <div class="border rounded-full h-12 w-12" v-for="item in profileLinks">
+                            <a :href="item.link" class="h-full w-full flex flex-col justify-center items-center" >
+                                <i :class="item.icon" class="text-2xl"></i>
+                            </a>
                         </div>
                     </div>
     
                     <!-- action button -->
                     <div class="grid grid-cols-2 gap-4 ml-auto w-full">
                         <button class="border py-2 rounded-full w-full font-[Jost] font-semibold text-lg bg-black text-white">Resume</button>
-                        <button class="border py-2 rounded-full w-full font-[Jost] font-semibold text-lg bg-black text-white">Contact</button>
+                        <button class="border py-2 rounded-full w-full font-[Jost] font-semibold text-lg bg-black text-white">
+                            <a href="#contact" class="">
+                                contact
+                            </a>
+                        </button>
                     </div>
                 </div>
             </div>

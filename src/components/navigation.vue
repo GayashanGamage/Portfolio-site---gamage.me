@@ -22,7 +22,7 @@ import { ref } from 'vue';
 const activeSection = 'intro'
 
 const navItems = [
-        { id: 'intro', icon: 'fas fa-home' },
+        { id: 'intro', icon: 'fas fa-home', link : 'introduction' },
         { id: 'about', icon: 'fas fa-user' },
         { id: 'skills', icon: 'fas fa-code' },
         { id: 'education', icon: 'fas fa-graduation-cap' },

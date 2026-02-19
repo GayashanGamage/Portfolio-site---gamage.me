@@ -1,10 +1,11 @@
 <template>
-    <div class="relative">
+    <div class="relative bg-[#FAF7F2]">
         <Sidebar></Sidebar>
         <Intro></Intro>
         <About></About>
         <Skills></Skills>
         <Project></Project>
+        <Educations></Educations>
         <Certificates></Certificates>
         <Contact></Contact>
         <Footer></Footer>
@@ -19,5 +20,6 @@ import Project from '@/components/project.vue';
 import Sidebar from '@/components/sidebar.vue';
 import Skills from '@/components/skills.vue';
 import Footer from '@/components/footer.vue';
+import Educations from '@/components/educations.vue';
 
 </script>

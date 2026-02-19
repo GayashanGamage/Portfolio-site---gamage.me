@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-auto" id="about">
-    <div class="flex flex-col h-screen gap-20 border w-[80%] p-10 mx-auto">
+    <div class="flex flex-col h-screen gap-20 w-[80%] p-10 mx-auto text-[#5A1E32]">
       <div class="grid grid-cols-2 gap-10 h-fit my-auto">
         
         <!-- introduction -->
@@ -12,7 +12,7 @@
         </div>
 
         <!-- discription -->
-        <div class="font-[Manrope] font-light text-xl flex flex-col gap-6 w-[90%] pt-1">
+        <div class="font-['JetBrains_Mono'] font-light text-lg flex flex-col gap-6 w-[90%] pt-1">
           <!-- <h2 class="">
             About Me
             <span class=""></span>

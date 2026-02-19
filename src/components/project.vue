@@ -1,40 +1,65 @@
 <template>
-  <div class="w-full h-auto" id="projects">
-    <div class="flex flex-col gap-20 border w-[80%] p-10 mx-auto min-h-screen">
-      <div class="flex flex-col gap-30 h-fit my-auto py-[min(6rem)]">
-        <h2 class="text-center font-[Manrope] font-black text-4xl">
+  <section id="projects" class="w-full">
+    <div class="max-w-7xl min-w-2xl w-full mx-auto min-h-screen flex items-center">
+      <div class="w-full flex flex-col gap-16 py-16">
+        <h2 class="text-center font-['JetBrains_Mono'] font-black text-4xl">
           Featured Projects
-          <span class=""></span>
         </h2>
-        <div class="grid grid-cols-2 gap-4">
-          <div 
-            v-for="project in projects" 
-            :key="project.id"
-            class="flex flex-col gap-5 border border-gray-300 px-6 py-6 rounded-xl"
+
+        <!-- ONE COLUMN + EACH CARD HORIZONTAL -->
+        <div class="flex flex-col gap-6">
+          <div
+            v-for="project in projects"
+            :key="project.title"
+            class="border border-gray-200 rounded-xl p-6 flex flex-col md:flex-row gap-6 shadow-lg bg-white"
           >
-            <div class="w-full h-[300px] overflow-hidden">
-              <img :src="project.image" class="w-full h-full object-cover object-center rounded-xl">
+            <!-- Image (first) -->
+            <div class="w-full md:w-[450px] h-[240px] md:h-[260px] overflow-hidden rounded-xl flex-shrink-0">
+              <img
+                :src="project.image"
+                :alt="project.title"
+                class="w-full h-full object-cover object-center"
+              />
             </div>
 
-            <!-- project detials -->
-            <div class="flex flex-col gap-5">
-              
-              <!-- project title -->
-              <div class="flex flex-row gap-10 items-center">
-                <i :class="project.icon"></i>
-                <h3 class="font-[Manrope] font-semibold text-2xl">{{ project.title }}</h3>
+            <!-- Text Content -->
+            <div class="flex flex-col gap-5 w-full">
+              <!-- Title row -->
+              <div class="flex items-center gap-4">
+                <!-- <i :class="project.icon" class="text-xl"></i> -->
+                <h3 class="font-['JetBrains_Mono'] font-bold text-2xl">
+                  {{ project.title }}
+                </h3>
               </div>
 
-              <p class="font-[Manrope] text-xl">{{ project.description }}</p>
+              <p class="font-['JetBrains_Mono'] text-md font-light text-gray-700">
+                {{ project.description }}
+              </p>
 
-              <!-- tech stack -->
-              <div class="flex flex-row gap-4">
-                <div class="font-[Manrope] text-sm border border-gray-300 py-1 px-4 rounded-lg" v-for="items in project.tech">{{ items }}</div>
-              </div>
-
-              <!-- project links -->
-              <div class="grid grid-cols-3 gap-4">
-                <button class="border py-2 rounded-lg" v-for="[key, value] in Object.entries(project.links)" @click="openNewPage(value)">{{ key }}</button>
+              <div class="flex flex-row justify-between mt-auto">
+                <!-- Tech stack -->
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    v-for="t in project.tech"
+                    :key="t"
+                    class="font-['JetBrains_Mono'] text-sm font-light bg-[#FAF7F2] border-gray-300 py-1 px-3 rounded-lg h-fit"
+                  >
+                    {{ t }}
+                  </span>
+                </div>
+  
+                <!-- Links -->
+                <div class="flex flex-wrap gap-3 mt-auto">
+                  <button
+                    v-for="[key, value] in Object.entries(project.links)"
+                    :key="key"
+                    class="mt-auto font-black w-fit ml-auto border py-2 px-4 rounded-md font-[Manrope] text-sm hover:text-[#B87350] text-white bg-[#B87350] hover:bg-white transition"
+                    :disabled="!value"
+                    @click="openNewPage(value)"
+                  >
+                    {{ key }}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -42,52 +67,53 @@
 
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
-
 const projects = [
-        {
-            title: 'Real-time Chat Platform',
-            image : 'https://www.giosg.com/hs-fs/hubfs/Blogs%202022/How%20to%20Choose%20the%20Right%20Live%20Chat%20Software%20for%20Your%20Business/How%20to%20Choose%20Live%20Chat%20Blog%20hero%20image%20%E2%80%93%201300%20x%20630.png?width=1300&name=How%20to%20Choose%20Live%20Chat%20Blog%20hero%20image%20%E2%80%93%201300%20x%20630.png',
-            icon: 'fas fa-comments',
-            description: 'Scalable messaging system with WebSocket connections and Redis pub/sub for real-time communication.',
-            tech: ['Node.js', 'Socket.io', 'Redis', 'MongoDB'],
-            links : {
-              github : 'https://youtube.com',
-              demo : '',
-              links : ''
-            }
-        },
-        {
-            title: 'E-commerce API',
-            image : 'https://www.agegracefullyamerica.com/wp-content/uploads/2024/10/Online-Shopping.-3-768x512.png',
-            icon: 'fas fa-shopping-cart',
-            description: 'Complete shopping platform with payment processing, inventory management, and order tracking.',
-            tech: ['Python', 'FastAPI', 'PostgreSQL', 'Stripe API'],
-            links : {
-              github : '',
-              demo : '',
-              links : ''
-            }
-        },
-        {
-            title: 'Analytics Service',
-            image : 'https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_9_Data_Mining_Tools.jpg',
-            icon: 'fas fa-chart-line',
-            description: 'Real-time data processing pipeline with dashboard and reporting features for business intelligence.',
-            tech: ['Go', 'Kafka', 'ClickHouse', 'Docker'],
-            links : {
-              github : '',
-              demo : '',
-              links : ''
-            }
-        },
-    ]
+  {
+    title: "Browser Automation bot",
+    image:
+      "https://ik.imagekit.io/myHotelSolutions/Gamage.dev/Project%20images/amazon%20web.png",
+    icon: "fas fa-comments",
+    description:
+      "A scalable web automation service built with FastAPI and Playwright that performs complex browser tasks through a clean REST API. Designed with modular workflow orchestration, retry mechanisms, and structured logging for production reliability. Supports cross-browser automation and async execution for high-performance task handling.",
+    tech: ["Python", "Playwright"],
+    links: {
+      GITHUB: "https://github.com/GayashanGamage/Amazon.com-web-automation-BOT",
+    },
+  },
+  {
+    title: "Hotel Booking Platform with chatbot",
+    image:
+      "https://ik.imagekit.io/myHotelSolutions/Gamage.dev/Project%20images/tea%20garden%20web.png",
+    icon: "fas fa-shopping-cart",
+    description:
+      "A full-stack food ordering system built with FastAPI and MongoDB, featuring dynamic menu management and secure guest checkout. Includes an admin dashboard for streamlined inventory and order management. Designed with clean API architecture for seamless frontend integration.",
+    tech: ["Python", "FastAPI", "Nuxt", "Stripe API", "MongoDB", "Docker", "Supabase"],
+    links: {
+      LIVE: "https://teagardenecovillas.com",
+    },
+  },
+  {
+    title: "Price slop - price monitoring and alerting system",
+    image:
+      "https://www.simplilearn.com/ice9/free_resources_article_thumb/Top_9_Data_Mining_Tools.jpg",
+    icon: "fas fa-chart-line",
+    description:
+      "An automated price tracking platform that monitors multiple e-commerce websites and sends real-time email notifications. Built with Python-based scraping pipelines and REST APIs for user-driven product tracking. Reduced manual monitoring effort by 90% through workflow automation.",
+    tech: ["Python", "FastAPI", "BeautifulSoup", "Qstash", "MongoDB", "VueJS"],
+    links: {
+      GITHUB: "https://github.com/GayashanGamage/Price-slope",
+      LIVE: "https://sigiriprice.gamage.dev",
+    },
+  },
+];
+
 
 const openNewPage = (link) => {
-  window.open(link, '_blank')
+  if (!link) return
+  window.open(link, "_blank", "noopener,noreferrer")
 }
-
 </script>

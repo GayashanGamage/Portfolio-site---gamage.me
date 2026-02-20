@@ -1,81 +1,18 @@
 <template>
-    <div class="w-full h-auto" id="introduction">
-        <div class="grid grid-cols-6 gap-20 max-w-7xl min-w-2xl w-full h-screen mx-auto">
+    <div class="font-['JetBrains_Mono'] flex flex-col lg:grid md:grid-cols-6 w-screen min-h-screen h-screen lg:max-w-4xl 2xl:max-w-6xl mx-auto" id="introduction">
         
-            <!-- description -->
-            <div class="flex flex-col justify-center col-span-4 gap-4 text-start">
-                <h1 class="font-[Manrope] text-[#5A1E32] font-black text-7xl">Gayashan Gamage</h1>
-                <h3 class="font-[Jost] text-[#5A1E32] font-light text-4xl">Fullstack developer</h3>
-                <p class="font-[Manrope] text-[#5A1E32] text-xl">I design scalable backend systems with clean architecture<br>
-                    and modern technologies. Passionate about solving complex problems<br>
-                    with elegant solutions.</p>
-                
-                <!-- button section -->
-                <div class="flex flex-col gap-4 pt-10 w-fit mr-auto">
-                    <!-- profile links -->
-                    <!-- <div class="flex flex-row gap-6 w-fit ml-auto">
-                        <div class="border rounded-full h-12 w-12" v-for="item in profileLinks">
-                            <a :href="item.link" class="h-full w-full flex flex-col justify-center items-center" >
-                                <i :class="item.icon" class="text-2xl"></i>
-                            </a>
-                        </div>
-                    </div> -->
-    
-                    <!-- action button -->
-                    <div class="grid grid-cols-3 gap-2 ml-auto w-full">
-                        <a href="https://github.com/GayashanGamage" target="_blank" class="">
-                            <button class="flex flex-row gap-4 items-center border py-2 rounded-full w-full font-[Jost] font-semibold text-lg bg-[#B87350] text-white px-10 hover:cursor-pointer hover:bg-white hover:text-[#B87350] transition">
-                                <i class="fa-brands fa-github text-xl"></i> 
-                                GitHub
-                            </button>
-                        </a>
-                        <a href="https://drive.google.com/uc?export=download&id=11mZ6NgNagNYjkrgP1jzFnGr9eXvbHviv" class="w-full h-full">
-                            <button class="flex flex-row gap-4 items-center border rounded-full w-full font-[Jost] font-semibold text-lg bg-[#B87350] text-white px-10 py-2 hover:cursor-pointer hover:bg-white hover:text-[#B87350] transition">
-                                <i class="fa-regular fa-file text-xl"></i>
-                                Resume
-                            </button>
-                        </a>
-                        <a href="#contact" class="">
-                            <button class="flex flex-row gap-4 items-center border py-2 rounded-full w-full font-[Jost] font-semibold text-lg bg-[#B87350] text-white px-10 hover:cursor-pointer hover:bg-white hover:text-[#B87350] transition">
-                                <i class="fa-regular fa-envelope text-xl"></i> 
-                                Contact
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-                
-            <!-- head shot image -->
-            <div class="flex flex-col justify-center items-center">
-                <div class="w-80 h-80 rounded-full">
-                    <img src="https://gamage.dev/assets/gayashan-awAKh4d0.jpg" alt="" class="rounded-full">
-                </div>
-            </div>
+        <!-- text section -->
+        <div class="order-2 lg:col-span-4 lg:order-1 h-1/2 px-4 md:px-0 lg:h-full flex flex-col lg:justify-center gap-2 lg:gap-6">
+            <h1 class="text-[#5A1E32] font-black text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left">Gayashan Gamage</h1>
+            <h2 class="text-[#5A1E32] font-light text-2xl md:text-3xl lg:text-4xl text-center lg:text-left">Fullstack Developer</h2>
+            <p class="text-[#5A1E32] text-sm sm:text-lg lg:t3ext-xl text-center lg:text-left w-[80%] md:w-[60%] mx-auto lg:mx-0 font-light">Passionate Fullstack Developer crafting scalable solutions with modern tech.</p>
+        </div>
+
+        <!-- image section  -->
+        <div class="order-1 lg:col-span-2 lg:order-2 w-full h-1/2 mx-auto flex flex-col lg:h-full">
+            <img src="https://ik.imagekit.io/myHotelSolutions/Gamage.dev/Others/gayashan.jpg" alt="" class="rounded-full border-6 border-white w-[45%] sm:w-[30%] lg:w-full h-auto my-auto mx-auto">
         </div>
     </div>
 </template>
 <script setup>
-// const profileLinks = [
-//     {
-//         name : 'GitHub',
-//         icon : 'fa-brands fa-square-github',
-//         link : 'https://github.com/GayashanGamage'
-//     },
-//     {
-//         name : 'Medium',
-//         icon : 'fa-brands fa-medium',
-//         link : 'https://medium.com/@gayashangamage'
-//     },
-//     {
-//         name : 'LeetCode',
-//         icon : 'fa-solid fa-l',
-//         link : 'https://leetcode.com/u/GayashanGamage/'
-//     },
-//     {
-//         name : 'LinkedIn',
-//         icon : 'fa-brands fa-linkedin',
-//         link : 'https://www.linkedin.com/in/gayashangamage/'
-//     },
-// ]
-
 </script>

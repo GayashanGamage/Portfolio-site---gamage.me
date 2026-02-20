@@ -1,14 +1,14 @@
 <template>
-    <div class="relative bg-[#FAF7F2]">
+    <div class="w-screen min-h-screen relative bg-[#FAF7F2]">
         <Sidebar></Sidebar>
         <Intro></Intro>
-        <About></About>
+        <!-- <About></About>
         <Skills></Skills>
         <Project></Project>
         <Educations></Educations>
         <Certificates></Certificates>
         <Contact></Contact>
-        <Footer></Footer>
+        <Footer></Footer> -->
     </div>  
 </template>
 <script setup>

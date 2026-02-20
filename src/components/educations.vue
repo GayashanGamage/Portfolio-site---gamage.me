@@ -1,53 +1,73 @@
 <template>
-  <section id="education" class="font-['JetBrains_Mono'] min-h-screen flex flex-col justify-center  max-w-6xl min-w-2 w-full mx-auto mt-40">
+  <section id="education" class="flex flex-col gap-16 font-['JetBrains_Mono'] min-h-screen h-auto py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
     
     <!-- Title -->
-    <h2 class="text-center font-black text-4xl mb-25">
-        Education
+    <h2 class="font-[Manrope] text-[#5A1E32] font-black text-4xl md:text-5xl flex flex-col lg:leading-18 text-center lg:text-center">
+      Education
     </h2>
 
     <!-- Timeline Wrapper -->
-    <div class="flex flex-col relative w-full mx-auto">
+    <div class="max-w-6xl w-full mx-auto md:max-w-xl lg:max-w-4xl 2xl:max-w-6xl relative">
 
-      <!-- Center Line -->
-      <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-red-100 transform -translate-x-1/2"></div>
+      <!-- Timeline Line - Left for mobile, Center for lg+ -->
+      <div class="absolute left-[1.125rem] lg:left-1/2 top-0 bottom-0 w-0.5 lg:w-1 bg-gradient-to-b from-red-200 via-red-300 to-red-200 lg:transform lg:-translate-x-1/2 h-[85%]"></div>
 
       <!-- Timeline Items -->
-      <div
-        v-for="(edu, index) in education"
-        :key="edu.id"
-        class="relative -mb-10 flex items-center w-full"
-        :class="index % 2 === 0 ? 'justify-start' : 'justify-end'"
-      >
-        
-        <!-- Card -->
-        <div class="w-full md:w-6/14 bg-white p-6 rounded-xl shadow-lg relative">
+      <div class="space-y-8 lg:space-y-0">
+        <div
+          v-for="(edu, index) in education"
+          :key="edu.id"
+          class="relative lg:mb-12"
+          :class="index % 2 === 0 ? 'lg:flex lg:justify-start' : 'lg:flex lg:justify-end'"
+        >
           
-          <!-- Dot -->
-          <div
-            class="absolute top-6 w-6 h-6 rounded-full bg-[#B87350] border-4 border-white"
-            :class="index % 2 === 0 
-              ? 'right-[-58px]' 
-              : 'left-[-58px]'"
-          ></div>
+          <!-- Card Container -->
+          <div 
+            class="pl-12 lg:pl-0 lg:w-[calc(50%-2rem)]"
+            :class="index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12', index !== 0 ? 'lg:-mt-40' : 'lg:mt-0'"
+          >
+            
+            <!-- Card -->
+            <div class="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative group">
+              
+              <div 
+                class="absolute w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-[#B87350] border-4 border-white shadow-md top-6 -left-[2.6rem] lg:top-8"
+                :class="index % 2 === 0 
+                  ? 'lg:-right-[3.65rem] lg:left-auto xl:-right-[3.85rem]' 
+                  : 'lg:-left-[3.65rem] xl:-left-[3.85rem]'"
+              ></div>
 
-          <div class="text-red-500 font-medium mb-2">
-            {{ edu.date }}
+              <div 
+                class="hidden lg:block absolute top-10 w-8 h-0.5 bg-red-200"
+                :class="index % 2 === 0 ? '-right-8' : '-left-8'"
+              ></div>
+
+              <div class="inline-block bg-red-50 text-red-600 font-semibold px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm mb-3 sm:mb-4">
+                {{ edu.date }}
+              </div>
+
+              <!-- Title -->
+              <h3 class="text-lg sm:text-xl md:text-xl lg:text-xl xl:text-xl font-bold text-gray-900 mb-2 sm:mb-3 leading-snug group-hover:text-[#B87350] transition-colors">
+                {{ edu.title }}
+              </h3>
+
+              <!-- Institute -->
+              <div class="text-sm sm:text-base text-gray-400 mb-3 sm:mb-4 flex items-start gap-2 font-black">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 mt-1 text-gray-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
+                <span>{{ edu.school }}</span>
+              </div>
+
+              <!-- Description -->
+              <p class="text-sm md:text-base lg:text-base text-gray-600 leading-relaxed">
+                {{ edu.description }}
+              </p>
+            </div>
+
           </div>
 
-          <h3 class="text-xl font-semibold mb-2">
-            {{ edu.title }}
-          </h3>
-
-          <div class="text-gray-600 mb-3">
-            {{ edu.school }}
-          </div>
-
-          <p class="text-gray-600 text-sm">
-            {{ edu.description }}
-          </p>
         </div>
-
       </div>
     </div>
   </section>

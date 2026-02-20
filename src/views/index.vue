@@ -5,8 +5,8 @@
         <About></About>
         <Skills></Skills>
         <Project></Project>
-        <!-- <Educations></Educations>
-        <Certificates></Certificates>
+        <Educations></Educations>
+        <!-- <Certificates></Certificates>
         <Contact></Contact>
         <Footer></Footer> -->
     </div>  

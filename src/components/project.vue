@@ -1,20 +1,19 @@
 <template>
   <section id="projects" class="w-full">
-    <div class="max-w-7xl min-w-2xl w-full mx-auto min-h-screen flex items-center">
+    <div class="max-w-7xl w-full mx-auto min-h-screen flex items-center">
       <div class="w-full flex flex-col gap-16 py-16">
-        <h2 class="text-center font-['JetBrains_Mono'] font-black text-4xl">
+        <h2 class="font-[Manrope] text-[#5A1E32] font-black text-4xl md:text-5xl flex flex-col lg:leading-18 text-center lg:text-center">
           Featured Projects
         </h2>
 
-        <!-- ONE COLUMN + EACH CARD HORIZONTAL -->
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-6 px-4 lg:px-0">
           <div
             v-for="project in projects"
             :key="project.title"
-            class="border border-gray-200 rounded-xl p-6 flex flex-col md:flex-row gap-6 shadow-lg bg-white"
+            class=" border-gray-200 rounded-xl md:max-w-xl lg:max-w-4xl 2xl:max-w-6xl p-2 lg:p-6 flex flex-col  lg:flex-row gap-6 shadow-lg bg-white mx-auto"
           >
             <!-- Image (first) -->
-            <div class="w-full md:w-[450px] h-[240px] md:h-[260px] overflow-hidden rounded-xl flex-shrink-0">
+            <div class="w-full lg:w-1/2 overflow-hidden rounded-md flex-shrink-0">
               <img
                 :src="project.image"
                 :alt="project.title"
@@ -23,37 +22,37 @@
             </div>
 
             <!-- Text Content -->
-            <div class="flex flex-col gap-5 w-full">
+            <div class="flex flex-col gap-5 w-full p-4">
               <!-- Title row -->
               <div class="flex items-center gap-4">
                 <!-- <i :class="project.icon" class="text-xl"></i> -->
-                <h3 class="font-['JetBrains_Mono'] font-bold text-2xl">
+                <h3 class="font-['JetBrains_Mono'] font-black text-xl">
                   {{ project.title }}
                 </h3>
               </div>
 
-              <p class="font-['JetBrains_Mono'] text-md font-light text-gray-700">
+              <p class="font-['JetBrains_Mono'] text-sm sm:text-base font-light text-gray-700">
                 {{ project.description }}
               </p>
 
-              <div class="flex flex-row justify-between mt-auto">
+              <div class="flex flex-col gap-2 sm:gap-0 sm:flex-row justify-between mt-auto">
                 <!-- Tech stack -->
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-2 w-full sm:w-7/10">
                   <span
                     v-for="t in project.tech"
                     :key="t"
-                    class="font-['JetBrains_Mono'] text-sm font-light bg-[#FAF7F2] border-gray-300 py-1 px-3 rounded-lg h-fit"
+                    class="font-['JetBrains_Mono'] text-sm font-light bg-[#FAF7F2] border-gray-300 py-1 px-3 rounded-full h-fit"
                   >
                     {{ t }}
                   </span>
                 </div>
   
                 <!-- Links -->
-                <div class="flex flex-wrap gap-3 mt-auto">
+                <div class="flex flex-wrap justify-end gap-3 mt-auto w-full sm:w-3/10">
                   <button
                     v-for="[key, value] in Object.entries(project.links)"
                     :key="key"
-                    class="mt-auto font-black w-fit ml-auto border py-2 px-4 rounded-md font-[Manrope] text-sm hover:text-[#B87350] text-white bg-[#B87350] hover:bg-white transition"
+                    class="flex flex-row justify-center items-center gap-2 whitespace-nowrap font-semibold text-xs md:text-sm py-2 px-3 sm:px-4 rounded-full bg-[#B87350] text-white hover:bg-[#5A1E32] transition-colors duration-300"
                     :disabled="!value"
                     @click="openNewPage(value)"
                   >

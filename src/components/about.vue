@@ -1,18 +1,18 @@
 <template>
   <div class="w-full h-auto" id="about">
-    <div class="flex flex-col h-screen gap-20 w-[80%] p-10 mx-auto text-[#5A1E32]">
-      <div class="grid grid-cols-2 gap-10 h-fit my-auto">
+    <div class="flex flex-col min-h-screen h-auto gap-20 2xl:max-w-6xl p-10 mx-auto text-[#5A1E32] 2xl:bg-white rounded-3xl">
+      <div class="flex flex-col gap-16 lg:grid grid-cols-2 h-fit my-auto">
         
         <!-- introduction -->
-        <div class="text-right font-[Manrope] font-black text-7xl flex flex-col leading-18">
-          Hello,<br>
-          nice to meet you.<br>
-          Go ahead &<br>
+        <div class="font-[Manrope] text-[#5A1E32] font-black text-4xl md:text-5xl flex flex-col lg:leading-18 text-center lg:text-right">
+          Hello,<br class="">
+          nice to meet you.<br class="hidden sm:block">
+          Go ahead &<br class="hidden sm:block">
           Explore
         </div>
 
         <!-- discription -->
-        <div class="font-['JetBrains_Mono'] font-light text-lg flex flex-col gap-6 w-[90%] pt-1">
+        <div class="font-['JetBrains_Mono'] font-light text-base flex flex-col gap-6 w-full text-center lg:text-left md:max-w-xl mx-auto">
           <!-- <h2 class="">
             About Me
             <span class=""></span>

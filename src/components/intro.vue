@@ -6,22 +6,22 @@
             <h1 class="text-[#5A1E32] font-black text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left">Gayashan Gamage</h1>
             <h2 class="text-[#5A1E32] font-light text-2xl md:text-3xl lg:text-4xl text-center lg:text-left">Fullstack Developer</h2>
             <p class="text-[#5A1E32] text-sm sm:text-lg lg:t3ext-xl text-center lg:text-left w-[80%] md:w-[60%] mx-auto lg:mx-0 font-light">Passionate Fullstack Developer crafting scalable solutions with modern tech.</p>
-            <div class="flex flex-row gap-4">
+            <div class="flex flex-row justify-center lg:justify-start gap-4">
                 <a href="https://drive.google.com/uc?export=download&id=1N1wJE5aPCbiF_sIZzeFY8s3whJrUyI2W" class="">
-                    <button class="font-semibold text-base py-2 px-4 rounded-full bg-[#5A1E32] text-white hover:bg-[#B87350] transition-colors duration-300">
-                        <i class="fa-solid fa-file"></i>
+                    <button class="flex flex-row justify-center items-center gap-2 whitespace-nowrap font-semibold text-xs md:text-sm py-2 px-3 sm:px-4 rounded-full bg-[#B87350] text-white hover:bg-[#5A1E32] transition-colors duration-300">
+                        <i class="fa-solid fa-file text-sm sm:text-base"></i>
                         Resume
                     </button>
                 </a>
                 <a href="https://github.com/GayashanGamage" class="">
-                    <button class="font-semibold text-base py-2 px-4 rounded-full bg-[#5A1E32] text-white hover:bg-[#B87350] transition-colors duration-300">
-                        <i class="fa-brands fa-github"></i>
+                    <button class="flex flex-row justify-center items-center gap-2 whitespace-nowrap font-semibold text-xs sm:text-sm py-2 px-3 sm:px-4 rounded-full bg-[#B87350] text-white hover:bg-[#5A1E32] transition-colors duration-300">
+                        <i class="fa-brands fa-github text-sm sm:text-base"></i>
                         GitHub
                     </button>
                 </a>
                 <a href="#contact" class="">
-                    <button class="font-semibold text-base py-2 px-4 rounded-full bg-[#5A1E32] text-white hover:bg-[#B87350] transition-colors duration-300">
-                        <i class="fa-solid fa-envelope"></i>
+                    <button class="flex flex-row justify-center items-center gap-2 whitespace-nowrap font-semibold text-xs sm:text-sm py-2 px-3 sm:px-4 rounded-full bg-[#B87350] text-white hover:bg-[#5A1E32] transition-colors duration-300">
+                        <i class="fa-solid fa-envelope text-sm sm:text-base"></i>
                         Contact Me
                     </button>
                 </a>

@@ -1,33 +1,32 @@
 <template>
-  <section id="skills" class="w-full min-h-screen font-['JetBrains_Mono']">
-    <div class="max-w-7xl min-w-2xl w-full mx-auto min-h-screen flex items-center">
+  <section id="skills" class="w-full min-h-screen flex flex-col justify-center font-['JetBrains_Mono'] py-20 lg:py-0">
+    <div class="max-w-7xl w-full mx-auto flex items-center">
       <div class="flex flex-col gap-14 m-auto">
-        <h2 class="text-center font-black text-4xl">
-          Skills & Technologies
+        <h2 class="font-[Manrope] text-[#5A1E32] font-black text-4xl md:text-5xl flex flex-col lg:leading-18 text-center lg:text-center">
+          Skills <br class="sm:block lg:hidden">& <br class="sm:block lg:hidden">Technologies
         </h2>
 
         <!-- Filters -->
         <div class="flex flex-wrap gap-3 justify-center">
-          <!-- mt-auto font-black w-fit ml-auto border py-2 px-4 rounded-md font-[Manrope] text-sm hover:text-[#B87350] text-white bg-[#B87350] hover:bg-white transition -->
           <button
             v-for="f in filters"
             :key="f.value"
             @click="activeFilter = f.value"
-            class="px-5 py-2 rounded-md border text-base transition shadow-lg font-black"
-            :class="activeFilter === f.value ? 'bg-[#B87350] text-white border-0' : 'bg-white text-[#B87350] border-gray-300 hover:bg-gray-50'"
+            class="flex flex-row justify-center items-center gap-2 whitespace-nowrap font-semibold text-xs md:text-sm py-2 px-3 sm:px-4 rounded-full transition-colors duration-300"
+            :class="activeFilter === f.value ? 'bg-[#B87350] text-white ' : 'bg-white text-[#B87350] border border-[#B87350] hover:bg-gray-50'"
           >
             {{ f.label }}
           </button>
         </div>
 
         <!-- Skills (shows based on filter) -->
-        <div class="flex flex-wrap gap-4 justify-center mt-4">
+        <div class="flex flex-wrap gap-2 md:gap-4 justify-center mt-4 md:max-w-xl lg:max-w-4xl xl:max-w-5xl mx-auto px-10 md:px-0">
           <button
             v-for="skill in filteredSkills"
             :key="skill.name"
-            class="flex items-center gap-4 border border-gray-300 py-3 px-6 rounded-full text-sm hover:bg-gray-50 transition bg-white"
+            class="flex items-center gap-4 border border-gray-300 py-2 lg:py-3 px-4 lg:px-6 rounded-full text-sm hover:bg-gray-50 transition bg-white"
           >
-            <i :class="skill.icon" class="text-lg"></i>
+            <i :class="skill.icon" class="text-sm md:text-lg"></i>
             <span class="text-sm">{{ skill.name }}</span>
           </button>
         </div>

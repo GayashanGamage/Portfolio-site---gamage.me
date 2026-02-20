@@ -6,8 +6,8 @@
         <Skills></Skills>
         <Project></Project>
         <Educations></Educations>
-        <!-- <Certificates></Certificates>
-        <Contact></Contact>
+        <Certificates></Certificates>
+        <!-- <Contact></Contact>
         <Footer></Footer> -->
     </div>  
 </template>

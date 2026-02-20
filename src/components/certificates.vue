@@ -1,8 +1,8 @@
 <template>
   <section id="certifications" class="w-full font-['JetBrains_Mono'] mt-40">
-    <div class="mx-auto max-w-7xl min-w-2xl w-full min-h-screen flex items-center py-20">
-      <div class="w-full flex flex-col gap-28">
-        <h2 class="text-center font-black text-4xl">
+    <div class="mx-auto max-w-7xl w-full min-h-screen flex items-center py-20 px-4">
+      <div class="w-full flex flex-col gap-20">
+        <h2 class="font-[Manrope] text-[#5A1E32] font-black text-4xl md:text-5xl flex flex-col lg:leading-18 text-center lg:text-center">
           Certifications
         </h2>
 
@@ -18,7 +18,7 @@
             v-for="cert in certifications"
             :key="cert.title"
             class="min-w-[350px] max-w-[400px] flex-shrink-0 snap-start min-h-[350px]
-                   flex flex-col gap-5 border border-gray-300 px-6 py-6 rounded-xl bg-white shadow-lg"
+                   flex flex-col gap-5 border border-gray-300 p-2 lg:px-6 lg:py-6 rounded-xl bg-white shadow-lg"
           >
             <div class="h-[250px] w-full p-1 rounded-md bg-[#B87350]/30 relative">
               <img :src="cert.image" alt="certification image" class="relative w-full h-full object-cover object-center rounded-md">
@@ -26,16 +26,16 @@
                 {{ cert.level }} level
               </p>
             </div>
-            <div class="flex items-start gap-4">
+            <div class="flex items-start gap-4 px-4 lg:px-0">
               <i :class="cert.icon" class="text-3xl mt-1 text-[#B87350]"></i>
-              <h3 class="font-semibold text-2xl leading-snug">
+              <h3 class="font-semibold text-xl leading-snug">
                 {{ cert.title }}
               </h3>
             </div>
 
             <div class="flex items-center justify-between gap-4">
 
-              <p class="text-sm text-right">
+              <p class="text-sm text-right px-4 lg:px-0">
                 By
                 <a
                   :href="cert.creator.website"
@@ -48,10 +48,10 @@
               </p>
             </div>
 
-            <p class="text-base text-gray-700">
+            <p class="text-base text-gray-700 px-4 lg:px-0">
               {{ cert.description }}
             </p>
-            <button class="mt-auto w-fit ml-auto border py-2 px-4 rounded-md font-[Manrope] text-sm hover:text-[#B87350] text-white bg-[#B87350] hover:bg-white transition">  
+            <button class="flex flex-row justify-center items-center gap-2 whitespace-nowrap font-semibold text-xs md:text-sm py-2 px-3 sm:px-4 rounded-full bg-[#B87350] text-white hover:bg-[#5A1E32] transition-colors duration-300 w-fit ml-auto">  
                 <a
                 :href="cert.link"
                 target="_blank"

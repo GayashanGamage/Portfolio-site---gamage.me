@@ -4,7 +4,7 @@
         <!-- text section -->
         <div class="order-2 lg:col-span-4 lg:order-1 h-1/2 px-4 md:px-0 lg:h-full flex flex-col lg:justify-center gap-2 lg:gap-6">
             <h1 class="text-[#5A1E32] font-black text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center lg:text-left">Gayashan Gamage</h1>
-            <h2 class="text-[#5A1E32] font-light text-2xl md:text-3xl lg:text-4xl text-center lg:text-left">Fullstack Developer</h2>
+            <span ref="el" class="text-[#5A1E32] font-light text-2xl md:text-3xl lg:text-4xl text-center lg:text-left min-h-10"></span>
             <p class="text-[#5A1E32] text-sm sm:text-lg lg:t3ext-xl text-center lg:text-left w-[80%] md:w-[60%] mx-auto lg:mx-0 font-light">Passionate Fullstack Developer crafting scalable solutions with modern tech.</p>
             <div class="flex flex-row justify-center lg:justify-start gap-4">
                 <a href="https://drive.google.com/uc?export=download&id=1N1wJE5aPCbiF_sIZzeFY8s3whJrUyI2W" class="">
@@ -35,4 +35,19 @@
     </div>
 </template>
 <script setup>
+import { onMounted, ref } from "vue"
+import Typed from "typed.js"
+
+const el = ref(null)
+
+onMounted(() => {
+  new Typed(el.value, {
+    strings: ["Fullstack developer", "AI Agent Developer", "Python Automation Enthusiast"],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 1000,
+    loop: true,
+    showCursor: false,
+  })
+})
 </script>

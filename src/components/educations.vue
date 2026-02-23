@@ -30,16 +30,17 @@
             <!-- Card -->
             <div class="bg-white p-4 sm:p-5 md:p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative group">
               
+              <!-- dot -->
               <div 
-                class="absolute w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 xl:w-8 xl:h-8 rounded-full bg-[#B87350] border-4 border-white shadow-md top-6 -left-[2.6rem] lg:top-8"
+                class="absolute w-4 h-4 sm:w-4 sm:h-4 lg:w-4 lg:h-4 xl:w-5 xl:h-5 rounded-full bg-[#B87350] border-2 border-white shadow-md top-6 -left-[2.6rem] lg:top-8"
                 :class="index % 2 === 0 
                   ? 'lg:-right-[3.65rem] lg:left-auto xl:-right-[3.85rem]' 
                   : 'lg:-left-[3.65rem] xl:-left-[3.85rem]'"
               ></div>
 
               <div 
-                class="hidden lg:block absolute top-10 w-8 h-0.5 bg-red-200"
-                :class="index % 2 === 0 ? '-right-8' : '-left-8'"
+                class="hidden lg:block absolute top-10 w-11 h-0.5 bg-red-200"
+                :class="index % 2 === 0 ? '-right-11' : '-left-11'"
               ></div>
 
               <div class="inline-block bg-red-50 text-red-600 font-semibold px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs sm:text-sm mb-3 sm:mb-4">

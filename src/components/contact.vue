@@ -1,17 +1,15 @@
 <template>
     <div class="w-full h-[90%] font-['JetBrains_Mono'] mt-40" id="contact">
-        <div class="flex flex-col justify-center max-w-7xl min-w-2xl w-full mx-auto h-full">
-            <div class="flex flex-col gap-30 ">
-                <h3 class="text-center font-black text-4xl">Contact me</h3>
-                <div class="flex flex-col gap-6">
-                    <!-- contact information -->
-                    <div class="grid grid-cols-3 gap-10 h-fit">
-                        <a :href="item.link" target="_blank" v-for="item in contactInfo">
-                            <div class="border-gray-200 border-1 flex flex-col gap-6 justify-center items-center py-10 max-h-40 w-full bg-white p-6 rounded-xl shadow-lg hover:bg-gray-100">
-                                <i :class="item.icon" class="text-3xl text-[#B87350]"></i>
-                                <!-- <h4 class="text-sm">{{ item.title }}</h4> -->
-                                <p class="text-md">{{ item.details }}</p>
+        <div class="flex flex-col justify-center max-w-7xl w-full mx-auto h-full p-2">
+            <div class="flex flex-col gap-30 bg-white rounded-xl py-10 p-10">
+                <h3 class="font-[Manrope] text-[#5A1E32] font-black text-4xl md:text-5xl flex flex-col lg:leading-18 text-center lg:text-center">Contact me</h3>
+                <div class="grid xl:grid-cols-3 md:grid-cols-2 gap-y-6 md:gap-y-10 gap-x-4">
+                    <div class="flex flex-row justify-cente items-center gap-4" v-for="item in contactInfo" :key="item.details">
+                        <a :href="item.link" target="_blank" class="flex flex-row justify-cente items-center gap-4">
+                            <div class="bg-[#B87350]/50 text-white h-10 w-10 rounded-full flex flex-col justify-center items-center">
+                                <i :class="item.icon" class="text-lg text-white"></i>
                             </div>
+                            <p class="text-center">{{ item.details }}</p>
                         </a>
                     </div>
                 </div>

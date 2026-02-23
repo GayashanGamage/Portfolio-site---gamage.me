@@ -7,8 +7,8 @@
         <Project></Project>
         <Educations></Educations>
         <Certificates></Certificates>
-        <!-- <Contact></Contact>
-        <Footer></Footer> -->
+        <Contact></Contact>
+        <Footer></Footer>
     </div>  
 </template>
 <script setup>

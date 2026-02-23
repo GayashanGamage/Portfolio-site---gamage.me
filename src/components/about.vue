@@ -1,10 +1,10 @@
 <template>
   <div class="w-full h-auto" id="about">
-    <div class="flex flex-col min-h-screen h-auto gap-20 2xl:max-w-6xl p-10 mx-auto text-[#5A1E32] 2xl:bg-white rounded-3xl">
+    <div class="flex flex-col min-h-screen h-auto gap-20 2xl:max-w-6xl p-10 mx-auto text-[#5A1E32] rounded-3xl">
       <div class="flex flex-col gap-16 lg:grid grid-cols-2 h-fit my-auto">
         
         <!-- introduction -->
-        <div class="font-[Manrope] text-[#5A1E32] font-black text-4xl md:text-5xl flex flex-col lg:leading-18 text-center lg:text-right">
+        <div class="font-[Manrope] text-[#5A1E32] font-black text-4xl md:text-5xl flex flex-col justify-center lg:leading-18 text-center lg:text-right">
           Hello,<br class="">
           nice to meet you.<br class="hidden sm:block">
           Go ahead &<br class="hidden sm:block">
@@ -18,17 +18,20 @@
             <span class=""></span>
           </h2> -->
           <p class="">
-            I'm a backend developer with 5+ years of experience building scalable systems and APIs. 
-            My expertise lies in designing robust architectures that can handle millions of requests 
-            while maintaining performance and reliability.
-            I'm a backend developer with 5+ years 
+            I’m a backend-focused software engineer with 1 year of
+            experience building scalable systems and high-performance
+            APIs. I specialize in designing clean, efficient backend 
+            architectures that remain fast, reliable, and maintainable as they grow. 
+            My work is grounded in strong system design principles 
+            and a commitment to writing production-ready, scalable code.
           </p>
           <p class="">
-            I specialize in Python, FastAPI, Django, and cloud infrastructure. My approach combines 
-            clean code principles with modern DevO, and cloud infrastructure. My approach combines 
-            clean code principles with modern DevOps practices to deliver efficient, maintainable solutions.
-            I specialize in Python, FastAPI, Django, and cloud infrastructure. My approach combines 
-            clean code principles with modern DevOps practices to deliver efficient, maintainable solutions.
+            I have strong expertise in Python and JavaScript, 
+            using FastAPI and Django to build robust RESTful 
+            services. I focus on modular, high-performance systems 
+            and cloud-ready deployments with modern DevOps practices, 
+            building backend solutions designed for scalability and 
+            real-world impact.
           </p>
         </div>
       </div>

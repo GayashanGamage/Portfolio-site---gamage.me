@@ -7,7 +7,7 @@
             <span ref="el" class="text-[#5A1E32] font-light text-2xl md:text-3xl lg:text-4xl text-center lg:text-left min-h-10"></span>
             <p class="text-[#5A1E32] text-sm sm:text-lg lg:t3ext-xl text-center lg:text-left w-[80%] md:w-[60%] mx-auto lg:mx-0 font-light">Passionate Fullstack Developer crafting scalable solutions with modern tech.</p>
             <div class="flex flex-row justify-center lg:justify-start gap-4">
-                <a href="https://drive.google.com/uc?export=download&id=1N1wJE5aPCbiF_sIZzeFY8s3whJrUyI2W" class="">
+                <a href="https://drive.google.com/uc?export=download&id=10ugdhqGuitnLRwZF0rJLzDNyyV5Delog" class="">
                     <button class="flex flex-row justify-center items-center gap-2 whitespace-nowrap font-semibold text-xs md:text-sm py-2 px-3 sm:px-4 rounded-full bg-[#B87350] text-white hover:bg-[#5A1E32] transition-colors duration-300">
                         <i class="fa-solid fa-file text-sm sm:text-base"></i>
                         Resume
@@ -42,7 +42,7 @@ const el = ref(null)
 
 onMounted(() => {
   new Typed(el.value, {
-    strings: ["Fullstack developer", "AI Agent Developer", "Python Automation Enthusiast"],
+    strings: ["Full-Stack Developer", "AI Agent Developer", "Python Automation Enthusiast"],
     typeSpeed: 50,
     backSpeed: 30,
     backDelay: 1000,
